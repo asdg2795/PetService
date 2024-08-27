@@ -1,0 +1,214 @@
+
+  /*
+  湲곕낯 諛곗튂
+  - <div class="container"> : �궗�씠�뱶諛붽� �몴�떆�릺�뒗 �솕硫�
+  - <div class="container collapse"> : �궗�씠�뱶諛붽� �닲寃⑥��뒗 �솕硫�
+  */
+  
+
+  .container {
+    position: relative;
+    margin: 0 auto;
+    width: 1400px;
+    height : 1000px;
+    border: 2px solid black;
+    border-radius:30px;
+    margin-top:100px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .container>.sidebar {
+    background-color: #2c3e50;
+  
+    /* sidebar�뒗 �솕硫댁쓣 湲곗��쑝濡� 諛곗튂 */
+    position: fixed;
+    left: 0;
+    top: 200px;
+    bottom: 0;
+    width: 17rem;
+    height: 550px;
+    padding: 1rem;
+  
+    z-index: 9999;
+  }
+  
+  .container>.contents {
+    
+    height:1000px;
+    /* contents�뒗 硫붿씤�럹�씠吏�(.container)瑜� 湲곗��쑝濡� 諛곗튂 */
+    position: absolute;
+    left: 15rem;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+    
+  }
+  .container>.contents>#table{
+    height:1000px;
+  }
+  /*
+  �닲源� �긽�깭�쓽 泥섎━
+  - �궗�씠�뱶諛붾뒗 �솕硫� 諛뽰쑝濡� �씠�룞�떆�궡
+  - 而⑦뀗痢좎쁺�뿭�� �궗�씠�뱶諛붽� �궗�씪吏� �옄由щ�� 梨꾩�
+  */
+  
+  
+  .container.collapse>.sidebar {
+    margin-left:-15rem;
+  }
+  
+  .container.collapse>.contents {
+    left:0;
+  }
+  
+  /* 遺��뱶�읇寃� �씠�룞�븯�룄濡� transition 泥섎━ */
+  .container > .sidebar {
+    transition-property: margin-left;
+    transition-duration:0.3s;
+    transition-timing-function: linear;
+  }
+  .container > .contents {
+    transition-property:left, padding-left;
+    transition-duration:0.3s;
+    transition-timing-function:linear;
+  }
+  
+  /* 
+  硫붾돱 踰꾪듉 �뵒�옄�씤
+  - �솕硫댁뿉 怨좎젙�븯怨� 紐⑤뱺 �솕硫대낫�떎 �슦�꽑 �몴�떆�릺�룄濡� 泥섎━
+  */
+  .container > .sidebar > .toggle {
+    position:fixed;
+    background-color: #34495e;
+    left:1rem;
+    z-index:100000;
+    top:16em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+    width:2.5rem;
+    height:2.5rem;
+  
+    border:3px solid black;
+  }
+  
+  /* 
+  硫붾돱�� �솕硫댁씠 寃뱀튂�뒗 �쁽�긽�쓣 �빐寃고븯湲� �쐞�빐 �뒪���씪 異붽� 
+  - �궗�씠�뱶諛붾뒗 �긽�떒 �뿬諛깆쓣 遺��뿬
+  - 而⑦뀗痢좎쁺�뿭�� 醫뚯륫 �뿬諛깆쓣 �닲源� �긽�깭�씪 寃쎌슦 遺��뿬(transition �꽕�젙)
+  */
+  .container > .sidebar {
+    padding-top: 4.5rem;
+  }
+  .container.collapse > .contents {
+    padding-left: 4.5rem;
+    
+  }
+  
+  /*
+  硫붾돱瑜� �뜑 �옒 蹂댁씠�룄濡� 蹂�寃�
+  - span 3媛쒕�� 諛곗튂�븯�뿬 �뵒�옄�씤 遺��뿬
+  */
+  .container > .sidebar > .toggle > span {
+    position:absolute;
+  
+    width:80%;
+    height:10%;
+  
+    background-color:#ecf0f1;
+  }
+  
+  /*
+  <div class="container"> �씪 寃쎌슦 硫붾돱 紐⑥뼇�쓣 �몴�떆
+  <div class="container collapse"> �씪 寃쎌슦 x 紐⑥뼇�쓣 �몴�떆
+  */
+  .container > .sidebar > .toggle > span:nth-child(1){
+    top:50%;
+    left:0%;
+    width:100%;
+    transform:translateY(-50%) rotate(45deg);
+  }
+  .container > .sidebar > .toggle > span:nth-child(2){
+    display:none;
+  }
+  .container > .sidebar > .toggle > span:nth-child(3){
+    top:50%;
+    left:0%;
+    width:100%;
+    transform:translateY(-50%) rotate(-45deg);
+  }
+  
+  .container.collapse > .sidebar > .toggle > span:nth-child(1){
+    top:15%;
+    left:10%;
+    width:80%;
+    transform:none;
+  }
+  .container.collapse > .sidebar > .toggle > span:nth-child(2){
+    top:50%;
+    left:10%;
+    transform:translateY(-50%);
+    display:block;
+  }
+  .container.collapse > .sidebar > .toggle > span:nth-child(3){
+    top:85%;
+    left:10%;
+    width:80%;
+    transform:translateY(-100%);
+  }
+  
+  /* 遺��뱶�읇寃� 泥섎━ */
+  .container > .sidebar > .toggle > span {
+    transition:all 0.3s linear;
+  }
+
+  
+  .sidebar>#content{
+    color:#ecf0f1;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .content-section {
+    display: none;
+  }
+  .content-section.active{
+    display:block;
+  }
+  .sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+  }
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .sidebar li:hover {
+    background-color: #d3d3d3; /* �샇踰� �떆 諛곌꼍�깋 蹂�寃� */
+  }
+
+  .sidebar li.active {
+    background-color: #3498db; /* �꽑�깮�맂 �빆紐⑹쓽 諛곌꼍�깋 */
+    color: #fff; /* �꽑�깮�맂 �빆紐⑹쓽 湲��옄�깋 */
+  }
+ .toggle{
+  cursor: pointer;
+  display: block;
+ }
+ table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,48 @@
+.main{
+    margin : 0 auto;
+
+}
+.main>.main-container{
+    margin: 0 auto;
+    width: 1400px;
+    height : 800px;   
+    margin-bottom: 20px;
+    margin-top : 100px;
+}
+#petregister{
+    width: 600px;
+    height: 700px;
+    border: 2px solid black;
+    border-radius: 30px 30px 40px 40px;
+    background-color: white;
+    margin : 0 auto;
+    margin-top:50px;
+ 
+  }
+#petregister_title{
+    background-color: rgb(251, 207, 137); 
+    border-radius: 30px 30px 0 0; 
+    width: 597px; 
+    height: 60px; 
+    line-height: 60px; 
+    border-bottom: 1px solid black;
+    display : flex;
+    justify-content: space-between;
+  }
+
+ #petregister_title>h1{
+    margin-left:230px;
+    font-size: 40px;
+ }
+ #petregister>#register_submit{
+    margin-left: 60px;
+    margin-top : 20px;
+    width:200px;
+    height:50px;
+  }
+  #petregister>#register_out{
+    margin-left: 60px;
+    margin-top : 20px;
+    width:200px;
+    height:50px;
+  }

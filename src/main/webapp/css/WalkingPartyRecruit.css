@@ -1,0 +1,72 @@
+.body {
+    width: 1150px; /* �럹�씠吏��쓽 �룺�쓣 1000px濡� 怨좎젙 */
+    height: 700px; /* �럹�씠吏��쓽 �넂�씠瑜� 700px濡� 怨좎젙 */
+    margin: 0 auto; /* 媛��슫�뜲 �젙�젹�쓣 �쐞�빐 margin�쓣 auto濡� �꽕�젙 */
+    background-color: #f0f0f0; /* �럹�씠吏��쓽 諛곌꼍�깋 �꽕�젙 (�꽑�깮�궗�빆) */
+  }
+
+.main{
+    display: flex;
+}
+
+.main_div2{
+    width: 400px;
+    margin-top: 140px;
+    margin-left: 50px;
+}
+
+
+.wkbtn{
+    margin-top: 30px;
+    margin-left: -868px;
+}
+
+
+#map {
+    height: 500px;
+    width: 600px;
+    margin-top: 140px;
+    margin-left: 50px;
+    box-shadow: 0 4px 10px rgba(10, 10, 10, 10); /* 洹몃┝�옄 �꽕�젙 */
+}
+
+
+
+#bt3{
+    margin-left: 1010px;
+}
+
+.wkpr_header{
+    position:absolute;
+    width: 1050px;
+    margin-top: 20px;
+    margin-left: 50px;
+
+}
+
+.inputset {
+    position: relative;
+  }
+  
+  .search-icon-container {
+    position: absolute;
+    top: 50%;
+    right: 20px; /* 議곗젅 媛��뒫�븳 媛� */
+    transform: translateY(-50%);
+  }
+  
+  .search-icon {
+    width: 20px; /* 議곗젅 媛��뒫�븳 媛� */
+    height: 20px; /* 議곗젅 媛��뒫�븳 媛� */
+    cursor: pointer;
+  }
+  
+  #peopleCount{
+  	border:none;
+  }
+  #peopleCount:focus{
+  	border:none;
+  	outline:none;
+  	
+  }
+  

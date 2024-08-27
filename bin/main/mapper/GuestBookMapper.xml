@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.multi.myapp.dao.GuestBookDao">
+	<insert id="GbookInsert" >
+      INSERT INTO petfriend(userid, no, comment) values(#{userid}, #{no}, #{comment})
+    </insert>
+   <select id="GBookSelect" resultType="com.multi.myapp.vo.GuestBookVO">
+      select replyno, no, comment, userid, writedate from petfriend where no=${param1}
+   </select>
+   <delete id="GbookDelete">
+	  delete from petfriend where replyno=#{param1}
+   </delete>
+</mapper>

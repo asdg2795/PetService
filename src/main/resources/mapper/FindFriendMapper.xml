@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.multi.myapp.dao.FindFriendDao">
+	<insert id="boardInsert">
+		insert into petfriend(userid, no, comment, writedate)
+		values(#{userid}, #{no}, #{comment}, #{writedate})
+	</insert>
+	<insert id="reportInsert">
+		insert into report(userid, category, comment, no, reporter)
+		values(#{userid}, #{category}, #{comment}, #{no}, #{reporter}) 
+	</insert>
+	<select id="findFriend" resultType="FindFriendVO">
+    	SELECT * FROM petlist
+	</select>
+	<select id="guestbook" resultType="FindFriendVO">
+    	SELECT * FROM petfriend
+	</select>
+	<select id="petprofile" resultType="FindFriendVO">
+		SELECT * FROM petprofile where no = #{param1}
+	</select>
+	<select id="petid" resultType="FindFriendVO">
+		SELECT userid, petname FROM petprofile where userid = #{userid}
+	</select>
+	<select id="petlist" resultType="FindFriendVO">
+		SELECT * FROM petlist where userid = #{param1}
+	</select>
+	<select id="totalRecord" resultType="int">
+		select count(no) from petfriend
+		<if test="searchWord!=null">
+			where ${searchKey} like '%${searchWord}%'		
+		</if>
+	</select>
+	<insert id="petRegisterInsert">
+		insert into petlist(userid, petimg, introducing, petname)
+		values(#{userid}, #{petimg}, #{introducing}, #{petname})
+	</insert>
+	<insert id="findfriendRequest">
+		insert into applylist(applyname, category, applyid)
+		values(#{applyname},#{category}, #{applyid})
+	</insert>
+	
+
+</mapper>

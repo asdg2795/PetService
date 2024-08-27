@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.multi.myapp.mapper.UserMapper">
+   <select id="getUserInfo" resultType="UserVO">
+      select userid, username, userpwd, addr, tel, email from  user where userid = #{param1}
+   </select>
+   <update id="updateuser">
+      update user set 
+      username = #{username}, userpwd = #{userpwd}, addr=#{addr}, addr=#{addr}, tel=#{tel}  
+      where userid=#{userid}
+   </update>
+   <select id="countusername" parameterType="java.lang.String" resultType="java.lang.Integer">
+      select count(username) from user where username=#{username}
+   </select>
+   <select id="totalRecord" resultType="java.lang.Integer">
+      select count(courseno) from makecourse
+   </select>
+   <select id="writetotalRecord" resultType="java.lang.Integer">
+      select count(subject) from board1 where userid=#{searchKey}
+   </select>
+   <select id="bookmarktotalRecord" resultType="java.lang.Integer">
+      select count(markname) from mybookmark where userid=#{searchKey}
+   </select>
+   <select id="grouptotalRecord" resultType="java.lang.Integer">
+      select count(groupname) from petgroup where userid=#{searchKey}
+   </select>
+   <select id="friendtotalRecord" resultType="java.lang.Integer">
+      select count(friendid) from myfriend where userid=#{searchKey}
+   </select>
+   <select id="applytotalRecord" resultType="java.lang.Integer">
+      select count(category) from applylist where userid=#{searchKey}
+   </select>
+   <select id="gmembertotalRecord" resultType="java.lang.Integer">
+      select count(groupname) from petgroup where groupname=#{searchKey}
+   </select>
+   <select id="courseList" resultType="CourseVO">
+      select courseno, coursename, startarea, endarea  
+      from makecourse
+      where userid=#{searchKey}
+      <if test="searchWord != null and searchWord !=''">
+         and coursename LIKE CONCAT('%', #{searchWord}, '%')
+      </if>
+      order by courseno asc
+      limit ${onePageRecord} offset ${offsetPoint}
+   </select>
+   <delete id="courseDel" parameterType="map">
+      delete from makecourse 
+      where courseno=#{courseno} and userid=#{logId}
+   </delete>
+   <select id="bookmarkList" resultType="BookmarkVO">
+      select markname, markaddr, markinfo from mybookmark 
+      where userid=#{searchKey}
+      limit ${onePageRecord} offset ${offsetPoint}
+   </select>
+   <delete id="markDel" parameterType="map">
+      delete from mybookmark 
+      where markname=#{markname} and userid=#{logId}
+   </delete>
+   <delete id="friendDel" parameterType="map">
+      delete from myfriend
+      where friendname=#{friendname} and userid=#{logId}
+   </delete>
+   <delete id="applyDel" parameterType="map">
+      delete from applylist
+      where applyid=#{applyid} and userid=#{logId}
+   </delete>
+   <delete id="writeDel" parameterType="map">
+      delete from board1
+      where subject=#{subject} and userid=#{logId}
+   </delete>
+   <delete id="groupDel" parameterType="map">
+      delete from petgroup
+      where groupname=#{groupname} and userid=#{logId}
+   </delete>
+   <update id="updateinfo" parameterType="map">
+      update petgroup set 
+      groupinfo = #{groupinfo} 
+      where groupname=#{groupname}
+   </update>
+   <delete id="memberDel" parameterType="map">
+      delete from petgroup
+      where groupname=#{groupname} and membername=#{membername}
+   </delete>
+   <delete id="groupDrop" parameterType="map">
+      delete from petgroup
+      where groupname=#{groupname}
+   </delete>
+   <select id="getmypet" resultType="PetVO">
+      select petname, petage, petgender, pethobby, petsize, petwant, introducing, petimg,petkind,addr from petprofile where userid=#{param1}
+   </select>
+   <update id="petupdate">
+      update petprofile set
+      petname=#{petname}, petage=#{petage}, petgender=#{petgender},
+      introducing=#{introducing},pethobby=#{pethobby},
+      petsize=#{petsize}, petwant=#{petwant}, petimg=#{petimg},
+      petkind=#{petkind},addr=#{addr}   
+      where userid=#{userid}
+   </update>
+   <select id="writeList" resultType="WriteVO">
+      select subject, content, writedate from board1
+      where userid=#{searchKey}
+      <if test="searchWord != null and searchWord !=''">
+         and subject LIKE CONCAT('%', #{searchWord}, '%')
+      </if>
+      limit ${onePageRecord} offset ${offsetPoint}
+   </select>
+	   <select id="groupList" resultType="GroupVO">
+	      select a.groupname, b.groupCount, a. groupinfo from 
+		(select groupname, groupinfo from petgroup where userid=#{searchKey}) a  
+		join
+		(select groupname, count(*) groupCount from petgroup 
+		group by groupname) b on a.groupname = b.groupname
+        limit ${onePageRecord} offset ${offsetPoint}
+	   </select>
+   <select id="gmemberList" resultType="GmemberVO">
+      select pg.groupname, pg.groupinfo, pg.groupdate, pg.membername, pg.groupinfo, pp.petname, pp.petage, pp.pethobby 
+      from petgroup pg JOIN petprofile pp ON pg.userid=pp.userid
+      where pg.groupname = #{groupname}
+   </select>
+   <select id="friendList" resultType="com.multi.myapp.vo.FriendVO">
+      select friendid, friendname, friendcomment, createdate     
+      from myfriend 
+      where userid=#{searchKey}
+      limit ${onePageRecord} offset ${offsetPoint}
+   </select>
+   <select id="applyList" resultType="ApplyVO">
+      select applyname, category, applydate, applyid from applylist 
+      where userid=#{searchKey}
+      limit ${onePageRecord} offset ${offsetPoint}
+   </select>
+   <insert id="addfriend" parameterType="map">
+      insert into myfriend(friendname, userid, friendid)
+      values(#{applyname}, #{logId}, #{applyid})
+   </insert>
+   <insert id="addgroup" parameterType="map">
+      insert into petgroup(groupname, membername, userid)
+      values(#{groupname}, #{applyname}, #{applyid})
+   </insert>
+   <select id="getpassword" resultType="java.lang.String">
+      select userpwd from user where userid=#{logId}
+   </select>
+   <delete id="withdraw">
+      delete from user 
+      where userid=#{logId}
+   </delete>
+   <select id="getFriendInfoByName" resultType="FriendInfoVO">
+        select petname, petage, pethobby, petwant, introducing
+        from petprofile
+        where userid = #{friendID}
+    </select>
+    <insert id="petinput">
+       insert into petprofile(petname,petsize,petwant,pethobby,petage,petgender,introducing, petimg, userid,petkind,addr)
+       values(#{petname},#{petsize},#{petwant},#{pethobby},#{petage}, #{petgender},#{introducing},#{petimg}, #{userid},#{petkind},#{addr})
+    </insert>
+</mapper>

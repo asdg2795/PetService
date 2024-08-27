@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.multi.myapp.mapper.TradeMapper">
+    <insert id="save" useGeneratedKeys="true" keyProperty="no">
+        insert into trade(userid, title, address, price, content, username, contact)
+        values(#{userId}, #{title}, #{address}, #{price}, #{content}, #{username}, #{contact})
+    </insert>
+
+
+    <select id="findAll" resultType="TradeVO">
+        select no, title, price, address, writedate
+        from trade
+        
+        <where>
+        	status = 1
+            <if test="tradeTitle != null and tradeTitle !=''">
+                and title like concat('%', #{tradeTitle}, '%')
+            </if>
+        </where>
+    </select>
+
+    <select id="findById" resultType="TradeVO">
+        select no, title, price, address, writedate, userid, content, username, status, contact
+        from trade
+        where no = #{no}
+    </select>
+
+    <delete id="delete">
+        delete from trade
+        where no = #{no}
+    </delete>
+
+    <update id="update">
+        update trade
+        set title = #{updateParam.title},
+            price = #{updateParam.price},
+            content = #{updateParam.content},
+            address = #{updateParam.address},
+            contact= #{updateParam.contact}
+        where no= #{no}
+    </update>
+
+    <update id="updateStatus">
+        update trade
+        set status = #{status}
+        where no = #{no}
+    </update>
+</mapper>
+

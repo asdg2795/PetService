@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.multi.myapp.dao.ManagerPageDao">
+	<select id="userManage" resultType="com.multi.myapp.vo.ManagerPageVO">
+    	SELECT * FROM user ORDER BY no asc;
+   	</select>
+   	<select id="petManage" resultType="com.multi.myapp.vo.ManagerPageVO">
+    	SELECT * FROM petprofile ORDER BY no asc;
+   	</select>
+   	<select id="reportManage" resultType="com.multi.myapp.vo.ManagerPageVO">
+    	SELECT * FROM report ORDER BY no asc;
+   	</select>
+   	<select id="requestManage" resultType="com.multi.myapp.vo.ManagerPageVO">
+   		select * from applylist 
+   	</select>
+   	<select id="reviewManage" resultType="com.multi.myapp.vo.ManagerPageVO">
+   		select * from review ORDER BY no asc;
+   	</select>
+   	<select id="boardManage" resultType="com.multi.myapp.vo.ManagerPageVO">
+   		select * from board1 ORDER BY no asc;
+   	</select> 
+   	<select id="walkingManage" resultType="com.multi.myapp.vo.ManagerPageVO">
+   		select * from makecourse 
+   	</select>
+   	<delete id="courseDel" parameterType="map">
+      delete from makecourse 
+      where courseno=#{courseno} 
+   </delete>
+   <delete id="UserDel" parameterType="map">
+      delete from user 
+      where no=#{no} 
+   </delete>
+   <delete id="PetProfileDel" parameterType="map">
+      delete from petprofile 
+      where no=#{no} 
+   </delete>
+   <delete id="PostDel" parameterType="map">
+      delete from board1 
+      where no=#{no} 
+   </delete>
+   <delete id="PartyDel" parameterType="map">
+      delete from applylist 
+      where no=#{no} 
+   </delete>
+    <delete id="ReviewDel" parameterType="map">
+      delete from review 
+      where no=#{no} 
+   </delete>
+   
+</mapper>

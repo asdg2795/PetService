@@ -1,0 +1,107 @@
+.main{
+    margin : 0 auto;
+
+}
+.main>.main-container{
+    margin: 0 auto;
+    width: 1400px;
+    height : 1000px;
+    border: 3px dashed black;
+    background-color: lightgray;
+    margin-bottom: 20px;
+    margin-top : 100px;
+    
+}
+.main>.main-container>#bd>#mainheader{
+    width: 1400px;
+    height:150px;
+    
+}
+.main>.main-container>#bd>#mainheader>h1{
+    margin: 50px;
+    float:left;
+    
+}
+.main>.main-container>#bd>#mainheader>h3{
+    margin : 50px;
+    float: left;
+    
+}
+#top_1,#top_2,#top_4,#top_5{
+    border : 3px solid black;
+    border-radius: 80px;
+    margin-left: 120px;
+    margin-top : 50px;
+    float:left;
+    height:300px;
+    width: 300px;
+}
+#top_3{
+    border : 3px solid black;
+    border-radius: 80px;
+    margin-left: 120px;
+    margin-top:50px;
+    float:left;
+    height:300px;
+    width: 300px;
+}
+#top_6{
+    border : 3px solid black;
+    border-radius: 80px;
+    margin-left: 120px;
+    margin-top:50px;
+    float:left;
+    height:300px;
+    width: 300px;
+}
+#top_1>img,#top_2>img,#top_3>img,#top_4>img,#top_5>img,#top_6>img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border : 1px solid black;   
+    float : left;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+#top_1>p,#top_2>p,#top_3>p,#top_4>p,#top_5>p,#top_6>p{
+    margin-top : 50px;
+    margin-left : 30px;
+    width: 100px;
+    height : 60px;
+    float:left;
+    font-size : 30px;
+    font-style: bold;
+}
+#top_1>h2,#top_2>h2,#top_3>h2,#top_4>h2,#top_5>h2,#top_6>h2{
+    float:left;
+    width: 250px;
+    margin-top: 10px;
+    margin-left: 30px;
+    color:white;
+}
+#top_1>span,#top_2>span,#top_3>span,#top_4>span,#top_5>span,#top_6>span{
+    float:left;
+    width: 250px;
+    height: 80px;
+    margin-top: 10px;
+    text-align:center;
+    margin-left:15px;
+}
+#top_1>button,#top_2>button,#top_3>button,#top_4>button,#top_5>button,#top_6>button{
+    float: right;
+    margin-right:50px;
+    
+}
+#bd{
+    margin : 0 auto;
+    border: 5px solid white;
+    border-radius: 150px;
+    width : 1390px;
+    height : 990px;
+    background-color: white;
+}
+#bd>.add{
+    float:left;
+    margin-right: 100px;
+    
+}

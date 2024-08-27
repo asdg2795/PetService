@@ -1,0 +1,206 @@
+.main{
+    margin : 0 auto;
+
+}
+.main>.main-container{
+    margin: 0 auto;
+    width: 1400px;
+    height : 1000px;
+    border: 3px dashed black;
+    background-color: lightgray;
+    margin-bottom: 20px;
+    margin-top : 100px;
+    
+}
+#bd{
+    margin : 0 auto;
+    border: 5px solid white;
+    border-radius: 150px;
+    width : 1390px;
+    height : 990px;
+    background-color: white;
+}
+#bd>img{
+    width: 450px;
+    height:400px;
+    margin-top : 50px;
+    margin-left : 100px;
+    margin-right : 100px;
+    float:left;
+    
+}
+.profile{
+    height:450px;
+    margin-top : 50px;
+    margin-left : 150px;
+}
+.profile>#name,.profile>#age,.profile>#gender,.profile>#abod{
+    width: 250px;
+    height: 50px;
+    margin-right: 50px;
+    margin-top : 30px;
+    float:left;
+}
+.profile>#character,.profile>#hobby,.profile>#region{
+    width: 400px;
+    height: 50px;
+    margin-right:30px;
+    margin-top : 30px;
+    float:left;
+}
+.profile>#name>input,.profile>#character>input,.profile>#age>input,.profile>#hobby>input,.profile>#gender>input,.profile>#abod>input,.profile>#region>input{
+    margin-left: 50px;
+    
+}
+.profile>#size{
+    width: 400px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top : 30px;
+    float:left;
+}
+.profile>#size>input{
+    margin-left: 38px;
+}
+#bd>#introducing{
+    margin-left: 100px;
+    width: 450px;
+    height: 200px;
+    border : 2px solid black;
+}
+#bd>#introducing>span{
+    font-size : 20px;
+    
+}
+#bd>.profile>#ml1>img{
+    width: 50px;
+    height:50px;
+    float:left;
+    border-radius:50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#bd>.profile>#ml2>img{
+    width: 50px;
+    height: 50px;
+    float:right;
+    margin-right:190px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    
+}
+#bd>.profile>#ml3>img{
+    width: 50px;
+    height: 50px;
+    margin-right:5px;
+    float:right;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    
+}
+#bd>#record{
+    margin-left: 100px;
+    margin-top : 50px;
+    font-size : 25px;
+    line-height: 50px;
+    width: 250px;
+    height: 150px;
+    border : 2px solid black;   
+    float:left;
+
+}
+#bd>#guestbook{
+    width: 800px;
+    float: right;
+    
+}
+#bd>#bottom-button>form{
+    float:left;
+    height:50px;
+    margin-left: 700px;
+    
+}
+#bd>#bottom-button>form>input{
+    width:150px;
+    height:50px;
+    margin-bottom:50px;
+}
+#bd>#ml1>#report{
+    background-color: white;
+    height: 500px;
+    width: 400px;
+}
+#bd>#guestbook>#gbcontent{
+    border : 1px solid black;
+    width: 550px;
+    height: 250px;
+    margin-top : 10px;
+    margin-left: 70px;
+    
+}
+#bd>#guestbook>#dd>#okay{
+    height:50px;
+    margin-left:50px;
+}
+#bd>#guestbook>h1{
+    margin-left:70px;
+}
+
+
+#bd>#guestbook>#dd>#writing{
+    margin-top : 10px;
+    margin-left: 70px;
+    
+    
+}
+#bd>#guestbook>#gbcontent>p{
+    margin-left : 20px;
+    margin-top: 10px;
+    line-height: 20px;
+    
+    
+}
+#guestbook>h1{
+    margin-left : 100px;
+    margin-bottom : 10px;
+}
+#profile_view{
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid black;
+    border-radius: 30px 30px 40px 40px;
+    background-color: white;
+    
+    display: none;
+  }
+  #profile_title{
+    background-color: rgb(251, 207, 137); border-radius: 30px 30px 0 0; 
+    width: 597px; height: 40px; line-height: 40px; 
+    
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+  }
+
+ #profile_title>h1{
+    margin-left:230px;
+    font-size: 40px;
+ }
+  #profile_view>#report_submit{
+    margin-left: 60px;
+    margin-top : 20px;
+    width:200px;
+    height:50px;
+  }
+  #profile_view>#profile_out{
+    margin-left: 60px;
+    margin-top : 20px;
+    width:200px;
+    height:50px;
+  }
+
+  

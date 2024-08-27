@@ -1,0 +1,115 @@
+.main {
+	
+    width: 1000px;
+    margin: 150px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+.product {
+    width: calc(24.70% - 20px);
+    margin: 0 10px 50px;
+    border: 1px solid #e1e2e3;
+    overflow: hidden;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    transition: box-shadow 0.3s;
+}
+
+.product:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product__image {
+    width:300px;
+    height: 200px;
+    border-bottom: 1px solid #e1e2e3;
+}
+
+.product__info {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.product__title {
+    color: #212529;
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+.product__description {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.product__price {
+    color: #9c1e1e;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* �궡 臾쇨굔 �삱由ш린 踰꾪듉 �뒪���씪 */
+.sell-button {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sell-button:hover {
+    background-color: rgba(var(--primary-rgb), .8);
+}
+
+/* 硫붿씤 �슦痢� �븯�떒 踰꾪듉 �뒪���씪 */
+.fixed-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: right 0.3s;
+}
+
+.fixed-button:hover {
+    background-color: rgba(var(--primary-rgb), .8);
+}
+
+/* 寃��깋 李� �뒪���씪 */
+.search-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.search-box {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}

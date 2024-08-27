@@ -1,0 +1,168 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<footer class="footer" data-bid="jCLony8z2Z">
+    <div class="footer-container">
+      <img class="footer-backimg img-pc" src="/images/img_footer.png" alt="PC 푸터">
+      <img class="footer-backimg img-mobile" src="/images/img_footer_mobile.png" alt="모바일 푸터">
+      <div class="footer-body container-md">
+        <h2 class="footer-logo">
+          <a href="#">
+            <img src="/images/img_logo_white.png" alt="로고">
+          </a>
+        </h2>
+        <ul class="footer-menulist">
+          <li class="footer-menuitem">
+            <a href="#">
+              <span>TEOTS</span>
+            </a>
+            <ul class="footer-sublist">
+              <li class="footer-subitem">
+                <a href="#">
+                  <span>소개</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer-menuitem">
+            <a href="#">
+              <span>동네 산책</span>
+            </a>
+            <ul class="footer-sublist">
+              <li class="footer-subitem">
+                <a href="#">
+                  <span>주변 산책로</span>
+                </a>
+              </li>
+              <li class="footer-subitem">
+                <a href="#">
+                  <span>산책 모임</span>
+                </a>
+              </li>
+              <li class="footer-subitem">
+                <a href="#">
+                  <span>친구 찾기</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer-menuitem">
+            <a href="#">
+              <span>동네 소식</span>
+            </a>
+            <ul class="footer-sublist">
+              <li class="footer-subitem">
+                <a href="#">
+                  <span>일상</span>
+                </a>
+              </li>
+              <li class="footer-subitem">
+                <a href="#">
+                  <span>질문</span>
+                </a>
+              </li>
+              <li class="footer-subitem">
+                <a href="#">
+                  <span>꿀팁</span>
+                </a>
+              </li>
+              <li class="footer-subitem">
+                <a href="#">
+                  <span>찾습니다</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer-menuitem">
+            <a href="#">
+              <span>동네 장터</span>
+            </a>
+            <ul class="footer-sublist">
+              <li class="footer-subitem">
+                <a href="#">
+                  <span>동네 장터</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer-menuitem">
+            <a href="#">
+              <span>동네 병원</span>
+            </a>
+            <ul class="footer-sublist">
+              <li class="footer-subitem">
+                <a href="#">
+                  <span>병원 찾기</span>
+                </a>
+              </li>
+              <li class="footer-subitem">
+                <a href="#">
+                  <span>병원 추천</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="footer-snslist">
+          <li class="footer-snsitem">
+            <a class="footer-snslink" href="#">
+              <img src="/icons/ico_instagram_white.svg" alt="인스타그램">
+            </a>
+          </li>
+          <li class="footer-snsitem">
+            <a class="footer-snslink" href="#">
+              <img src="/icons/ico_youtube_white.svg" alt="유튜브">
+            </a>
+          </li>
+          <li class="footer-snsitem">
+            <a class="footer-snslink" href="#">
+              <img src="/icons/ico_facebook_white.svg" alt="페이스북">
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-menugroup">
+          <li class="footer-menulink">
+            <a href="#">
+              <span>이용약관</span>
+            </a>
+          </li>
+          <li class="footer-menulink">
+            <a href="#">
+              <span>개인정보처리방침</span>
+            </a>
+          </li>
+          <li class="footer-menulink">
+            <a href="#">
+              <span>ㅇㅁㄴㅁㄹ</span>
+            </a>
+          </li>
+          <li class="footer-menulink">
+            <a href="#">
+              <span>ㅁㄴㅇㅁㄴ</span>
+            </a>
+          </li>
+        </ul>
+        <div class="footer-txtgroup">
+          <div class="footer-txt">
+            <p> 서울특별시 강남구 언주로 508 서울상록빌딩 (우)06152 </p>
+            <p>
+              <span>T. 010-0000-1111</span>
+              <span>E. teots@gmail.com</span>
+            </p>
+          </div>
+          <div class="footer-txt">
+            <p>2023 BY TEAM 5. ALL RIGHTS RESEVED</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- 푸터 영역 끝 -->
+  <script src="/js/setting.js"></script>
+  <script src="/js/plugin.js"></script>
+  <script src="/js/palette.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/script.js"></script>
+
+</body>
+
+</body>
+</html>

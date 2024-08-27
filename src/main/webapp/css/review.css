@@ -1,0 +1,35 @@
+.main{
+    margin : 0 auto;
+
+}
+.main>.main-container{
+    margin: 0 auto;
+    width: 1000px;
+    height : 1000px;
+    border: 3px solid black;
+     border-radius: 30px;
+    margin-bottom: 20px;
+    margin-top : 100px;
+    
+}
+#boardList{
+	overflow:auto;
+	}
+	
+#boardList>li{
+	float:left;
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #ddd;
+	width:10%;
+}
+#boardList>li:nth-child(5n+1){
+	margin-left:10px;
+}
+#boardList>li:nth-child(n){
+	width:16%;
+	/*말중임하기*/
+	white-space:nowrap;/*줄바꾸지 않음*/
+	overflow:hidden;/*넘친데이터숨기기*/
+	text-overflow:ellipsis;/*넘친데이터가 있으면 ... 표시하기*/	
+	}

@@ -1,0 +1,56 @@
+plugins {
+   id 'java'
+   id 'war'
+   id 'org.springframework.boot' version '2.7.17'
+   id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.multi'
+version = '0.0.1-SNAPSHOT'
+
+java {
+   sourceCompatibility = '11'
+}
+
+configurations {
+   compileOnly {
+      extendsFrom annotationProcessor
+   }
+}
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+   implementation 'org.springframework.boot:spring-boot-starter-mail'
+   implementation 'org.springframework.boot:spring-boot-starter-web'
+   compileOnly 'org.projectlombok:lombok'
+   developmentOnly 'org.springframework.boot:spring-boot-devtools'
+   annotationProcessor 'org.projectlombok:lombok'
+   providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+   testImplementation 'org.springframework.boot:spring-boot-starter-test'
+   
+   implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+   implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.58'
+   
+   //implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.14'
+   
+   //implementation group: 'org.mybatis', name: 'mybatis-spring', version: '3.0.3'
+   
+   //implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.3.18'
+   
+   implementation 'javax.inject:javax.inject:1'
+   
+   implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.2.2' // 3.0.1
+   
+   implementation 'org.springframework.boot:spring-boot-starter-jdbc:2.7.18'
+   
+   implementation 'com.mysql:mysql-connector-j:8.0.31'
+   
+   
+}
+
+tasks.named('test') {
+   useJUnitPlatform()
+}
